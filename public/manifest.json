@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "memo-app-extension",
+  "version": "1.0",
+  "description": "ローカル専用メモ管理拡張",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "index.html"
+  }
+}
