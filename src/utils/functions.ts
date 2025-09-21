@@ -22,21 +22,15 @@ export const loadMemos = async (): Promise<Memo[]> => {
 export const initializeLoadMemos = async (): Promise<Memo[] | undefined> => {
   try {
     const loadedMemos = await loadMemos();
-    if (loadedMemos.length === 0) {
-      const defaultMemos = [
-        {
-          id: 1,
-          title: "Sample Memo",
-          content: "This is a sample memo.",
-        },
-      ];
-      return defaultMemos;
-    } else {
-      return loadedMemos;
-    }
+    if (isStorageEmpty(loadedMemos)) return;
+    return loadedMemos;
   } catch (error) {
     console.error("Failed to load memos:", error);
   }
+};
+
+export const isStorageEmpty = (memos: Memo[]): boolean => {
+  return memos.length === 0;
 };
 
 export const initializeSetMemos = (
@@ -58,7 +52,7 @@ export const initializeMemos = async (
 };
 
 // カレントIDの処理
-export const saveCurrentMemoId = async (currentMemoId: number) => {
+export const saveCurrentMemoId = async (currentMemoId: number | null) => {
   await chrome.storage.local.set({ currentMemoId });
 };
 
@@ -67,16 +61,11 @@ export const loadCurrentMemoId = async (): Promise<number | null> => {
   return result.currentMemoId || null;
 };
 
-export const setCurrentMemoId = (id: number) => {
-  setCurrentMemoId(id);
-};
-
 export const initializeLoadCurrentMemoId = async (): Promise<
   number | null | undefined
 > => {
   try {
-    const loadedCurrentMemoId = await loadCurrentMemoId();
-    return loadedCurrentMemoId;
+    return await loadCurrentMemoId();
   } catch (error) {
     console.error("Failed to load current memo ID:", error);
   }
@@ -84,13 +73,13 @@ export const initializeLoadCurrentMemoId = async (): Promise<
 
 export const initializeSetCurrentMemoId = (
   currentMemoId: number | null,
-  setCurrentMemoId: Dispatch<SetStateAction<number>>
+  setCurrentMemoId: Dispatch<SetStateAction<number | null>>
 ) => {
-  setCurrentMemoId(currentMemoId ?? 1);
+  setCurrentMemoId(currentMemoId ?? null);
 };
 
 export const initializeCurrentMemoId = async (
-  setCurrentMemoId: Dispatch<SetStateAction<number>>
+  setCurrentMemoId: Dispatch<SetStateAction<number | null>>
 ) => {
   try {
     const loadedCurrentMemoId = await initializeLoadCurrentMemoId();

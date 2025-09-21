@@ -5,6 +5,7 @@
   --bg-app: #333;
   --bg-control: white;
   --bg-textarea: white;
+  --bg-textarea-disabled: #ccc;
   --bg-memo: yellow;
   --bg-memo-current: pink;
   --bg-btn-add: orange;
@@ -13,12 +14,12 @@
   --text-color: black;
 
   --width-app: 600px;
-  --height-app: 800px;
-  --height-control: 300px;
-  --height-textarea: 600px;
+  --height-app: 100%;
+  --height-control: 200px;
+  --height-textarea: 300px;
 }
 button,a {
-  transition: all 0.3s;
+  transition: opacity 0.3s;
   &:hover {
     cursor: pointer;
     opacity: 0.8;
