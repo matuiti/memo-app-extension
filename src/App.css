@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+/* css変数を使って定義 */
+:root {
+  --bg-app: #333;
+  --bg-control: white;
+  --bg-textarea: white;
+  --bg-memo: yellow;
+  --bg-memo-current: pink;
+  --bg-btn-add: orange;
+  --bg-btn-delete: green;
+
+  --text-color: black;
+
+  --width-app: 600px;
+  --height-app: 800px;
+  --height-control: 300px;
+  --height-textarea: 600px;
+}
+button,a {
+  transition: all 0.3s;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}
