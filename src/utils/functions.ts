@@ -1,7 +1,7 @@
 import type { Dispatch, SetStateAction } from "react";
 import type { Memo } from "./types";
 
-// contentの最初の任意文字数の文字を返す
+// contentの最初の文字を任意の文字数分返す
 export const generateTitle = (content: string, length: number = 10): string => {
   const trimmedContent = content.trim();
   return trimmedContent.length > length
@@ -10,6 +10,7 @@ export const generateTitle = (content: string, length: number = 10): string => {
 };
 
 // メモの処理
+
 export const saveMemos = async (memos: Memo[]) => {
   await chrome.storage.local.set({ memos });
 };
