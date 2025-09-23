@@ -11,3 +11,7 @@ export const CurrentMemoIdContext = createContext<
 
 export const TextAreaRefContext =
   createContext<RefObject<HTMLTextAreaElement | null> | null>(null);
+
+export const FilteredMemosContext = createContext<
+  [Memo[], Dispatch<SetStateAction<Memo[]>>]
+>([[], () => {}]);

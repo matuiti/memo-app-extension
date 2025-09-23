@@ -2,7 +2,7 @@ import type { Dispatch, SetStateAction } from "react";
 import type { Memo } from "./types";
 
 // contentの最初の任意文字数の文字を返す
-export const generateTitle = (content: string, length: number = 5): string => {
+export const generateTitle = (content: string, length: number = 10): string => {
   const trimmedContent = content.trim();
   return trimmedContent.length > length
     ? trimmedContent.slice(0, length) + "..."

@@ -30,7 +30,7 @@ const DeleteButton = () => {
 
   return (
     <button
-      className="w-8 h-8 bg-[var(--bg-btn-delete)] rounded-sm"
+      className="col-start-12 w-9 h-9 bg-[var(--bg-btn-delete)] rounded-sm"
       disabled={currentMemoId === null || memos.length === 0}
       onClick={handleDeleteMemo}
     >

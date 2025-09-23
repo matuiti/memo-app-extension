@@ -29,7 +29,7 @@ const AddButton = () => {
 
   return (
     <button
-      className="w-8 h-8 bg-[var(--bg-btn-add)] rounded-sm"
+      className="col-start-11 w-9 h-9 bg-[var(--bg-btn-add)] rounded-sm"
       onClick={handleAddMemo}
     >
       ＋

@@ -2,24 +2,34 @@
 
 /* css変数を使って定義 */
 :root {
-  --bg-app: #333;
+  --bg-app: #bfbfbf;
   --bg-control: white;
+  --bg-textarea-wrap: var(--bg-app);
   --bg-textarea: white;
   --bg-textarea-disabled: #ccc;
-  --bg-memo: yellow;
+  --bg-memo: var(--bg-app);
   --bg-memo-current: pink;
-  --bg-btn-add: orange;
-  --bg-btn-delete: green;
+  --bg-btn-add: #eb2c2c;
+  --bg-btn-delete: mediumturquoise;
+  --bg-input-search: bisque;
 
   --text-color: black;
+  --text-color-muted: #888;
 
-  --width-app: 600px;
+  --outline-color: palevioletred;
+
+  --width-app: 620px;
   --height-app: 100%;
   --height-control: 200px;
+  --width-input-search: 60%;
+  --height-input-search: 36px;
   --height-textarea: 300px;
+
+  --letter-spacing: 0.05em;
 }
-button,a {
-  transition: opacity 0.3s;
+button,
+a {
+  transition: opacity 0.2s;
   &:hover {
     cursor: pointer;
     opacity: 0.8;

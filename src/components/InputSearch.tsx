@@ -1,30 +1,38 @@
-// import { useState, useContext } from "react";
-// import { CurrentMemoIdContext, MemoContext } from "../contexts/contexts";
+import { useState, useContext, useEffect } from "react";
+import { MemoContext, FilteredMemosContext } from "../utils/contexts";
 
-// const InputSearch = () => {
-//   const memoContext = useContext(MemoContext);
-//   const [memos, setMemos] = memoContext ?? [[], () => {}];
+const InputSearch = () => {
+  const memoContext = useContext(MemoContext);
+  const [memos] = memoContext ?? [[]];
+  const filteredMemosContext = useContext(FilteredMemosContext);
+  const [, setFilteredMemos] = filteredMemosContext ?? [[]];
+  const [inputValue, setInputValue] = useState<string>("");
 
-//   const currentMemoIdContext = useContext(CurrentMemoIdContext);
-//   const [currentMemoId, setCurrentMemoId] = currentMemoIdContext ?? [
-//     null,
-//     () => {},
-//   ];
-  
-//   const [inputValue, setInputValue] = useState<string>("");
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(e.target.value);
+  };
 
-//   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-//     setInputValue(e.target.value);
-//   };
+  useEffect(() => {
+    if (inputValue === "") {
+      setFilteredMemos(memos);
+    } else {
+      const filtered = memos.filter((memo) =>
+        memo.content.includes(inputValue)
+      );
+      setFilteredMemos(filtered);
+    }
 
-//   return (
-//     <input
-//       type="text"
-//       placeholder="Search memos..."
-//       value={inputValue}
-//       onChange={handleChange}
-//     />
-//   );
-// };
+  }, [inputValue, memos, setFilteredMemos]);
 
-// export default InputSearch;
+  return (
+    <input
+      type="text"
+      placeholder="検索する"
+      value={inputValue}
+      onChange={handleChange}
+      className="col-span-10 row-span-2 justify-self-center self-center px-5 py-2 bg-[var(--bg-input-search)] rounded-sm min-w-[var(--width-input-search)] h-[var(--height-input-search)] outline-none"
+    />
+  );
+};
+
+export default InputSearch;

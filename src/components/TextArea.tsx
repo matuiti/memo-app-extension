@@ -26,19 +26,17 @@ const TextArea = () => {
     }
     const currentMemo = memos.find((memo) => memo.id === currentMemoId);
     setInputValue(currentMemo?.content ?? "");
+     window.scrollTo({ top: 0, behavior: "auto" });
   }, [currentMemoId, memos]);
 
-  // 編集時にリアルタイム保存
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    const value = e.target.value;
-    setInputValue(value);
-
     if (currentMemoId === null) return;
-    const title = generateTitle(value, 5);
 
-    // 新しいメモ配列を作成
+    const content = e.target.value;
+    const title = generateTitle(content, 10);
+    setInputValue(content);
     const newMemos = memos.map((memo: Memo) =>
-      memo.id === currentMemoId ? { ...memo, title, content: value } : memo
+      memo.id === currentMemoId ? { ...memo, title, content: content } : memo
     );
 
     setMemos(newMemos);
@@ -51,8 +49,8 @@ const TextArea = () => {
       value={inputValue}
       onChange={handleChange}
       disabled={memos.length === 0}
-      placeholder={memos.length === 0 ? "＋ボタンでメモを追加" : "メモを編集"}
-      className={`w-full h-full p-2 resize-none outline-none text-[var(--text-textarea)] overflow-y-scroll ${
+      placeholder={memos.length === 0 ? "＋ボタンでメモを追加" : "メモを書く"}
+      className={`bg-[var(--bg-textarea)] w-full h-full min-h-[var(--height-textarea)] p-2 border outline-none text-[var(--text-textarea)] overflow-y-scroll ${
         memos.length === 0
           ? "bg-[var(--bg-textarea-disabled)]"
           : "bg-[var(--bg-textarea)]"
