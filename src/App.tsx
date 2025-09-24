@@ -36,7 +36,7 @@ export function App() {
               className={`p-2.5 w-[var(--width-app)] min-h-[var(--height-app)] flex flex-col tracking-[var(--letter-spacing)]`}
             >
               <div
-                className={`grid grid-cols-12 grid-rows-4 gap-2 w-full h-full max-h-[var(--height-control)] bg-[var(--bg-control)] px-1 py-2.5`}
+                className={`grid grid-cols-9 grid-rows-4 gap-2 w-full h-full max-h-[var(--height-control)] bg-[var(--bg-control)] py-2.5`}
               >
                 <InputSearch />
                 <AddButton />

@@ -14,7 +14,7 @@ const ExportButton = () => {
 
   return (
     <button
-      className="col-start-11 col-span-2 row-start-3 w-15 h-10 bg-[var(--bg-btn-export)] rounded-sm justify-self-center"
+      className="col-start-8 w-17 h-10 bg-[var(--bg-btn-export)] rounded-sm justify-self-center"
       onClick={handleExport}
     >
       Export

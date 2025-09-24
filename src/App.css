@@ -23,10 +23,10 @@
 
   --width-app: 680px;
   --height-app: 100%;
-  --height-control: 200px;
-  --width-input-search: 60%;
-  --height-input-search: 36px;
-  --height-textarea: 300px;
+  --height-control: 217px;
+  --width-input-search: 100%;
+  --height-input-search: 40px;
+  --height-textarea: 320px;
 
   --letter-spacing: 0.05em;
 }
