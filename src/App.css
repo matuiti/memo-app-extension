@@ -7,7 +7,7 @@
   --bg-textarea-wrap: var(--bg-app);
   --bg-textarea: white;
   --bg-textarea-disabled: #ccc;
-  --bg-memo: var(--bg-app);
+  --bg-memo: #f5f5f5;
   --bg-memo-current: pink;
   --bg-btn-add: #eb2c2c;
   --bg-btn-delete: mediumturquoise;
@@ -19,6 +19,7 @@
   --text-color-muted: #888;
   --outline-color-input-search: green;
   --outline-color-memo: palevioletred;
+  --border-color-memo: rgba(0, 0, 0, 0.3);
 
   --width-app: 680px;
   --height-app: 100%;

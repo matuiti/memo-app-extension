@@ -13,6 +13,7 @@ const DeleteButton = () => {
   ];
 
   const handleDeleteMemo = () => {
+    if (!window.confirm("選択中のメモを削除します。削除後にデータは復元できません。")) return;
     const newMemos = memos.filter((memo) => memo.id !== currentMemoId);
     if (newMemos.length === 0) {
       setMemos([]);

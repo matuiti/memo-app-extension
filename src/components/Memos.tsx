@@ -30,7 +30,7 @@ const Memos = () => {
             className={`min-w-8 min-h-8 px-3.5 py-2.5 rounded-sm ${
               currentMemoId === memo.id
                 ? "bg-[var(--bg-memo-current)] outline outline-[var(--outline-color-memo)] outline-offset-1"
-                : "bg-[var(--bg-memo)]"
+                : "bg-[var(--bg-memo)] border border-[var(--border-color-memo)]"
             }
             ${memo.title.length === 0 ? "text-[var(--text-color-muted)]" : ""}`}
             onClick={() => handleMemoClick(memo.id)}
