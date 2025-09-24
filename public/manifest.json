@@ -4,6 +4,7 @@
   "version": "1.0",
   "description": "ローカル専用メモ管理拡張",
   "permissions": ["storage"],
+  "key":"MIIBCgKCAQEAlJnK2Is3GZH4c1wa8FJ0jqhQLY6VaItRbtGwnpYQ94TDOdKB1S2RbVLZJU96zoRLGhZtn6E9Ir/opR7xq70FjZHrtKHLJG4IxImsgTiiq+BSvxGJmY+U89VdbsXVFf4ITlIMF73pT0vqzxbVw8nRHK6CKs1WJzI3kFJXt0d8/P9WkcYJ85AcxI9ajZdda/8GNzZcwxEeXUGcrcvna2lrkKyXiDDtcW6ff1pbuKNMemHcPUtpx0QFWbl9N4kH5aApIPWAfavqOUPboje008ka1u+3zex0M4xb8LyITggbCD8U80iFmkJEuMECEqIESrP9M7ovAkdjR8nw2UXwgudCtQIDAQAB",
   "icons": {
     "16": "icon128.png",
     "48": "icon128.png",
