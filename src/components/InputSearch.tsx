@@ -30,7 +30,7 @@ const InputSearch = () => {
       placeholder="検索する"
       value={inputValue}
       onChange={handleChange}
-      className="col-span-10 row-span-2 justify-self-center self-center px-5 py-2 bg-[var(--bg-input-search)] rounded-sm min-w-[var(--width-input-search)] h-[var(--height-input-search)] outline-none"
+      className="col-span-10 row-span-2 self-center px-5 py-2 bg-[var(--bg-input-search)] rounded-sm min-w-[var(--width-input-search)] h-[var(--height-input-search)] outline-none"
     />
   );
 };
