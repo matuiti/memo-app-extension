@@ -20,8 +20,10 @@ const InputSearch = () => {
     if (inputValue === "") {
       setFilteredMemos(memos);
     } else {
+      // 全てのcontentを小文字に変換してから検索
+      const lowerCaseInput = inputValue.toLowerCase();
       const filtered = memos.filter((memo) =>
-        memo.content.includes(inputValue)
+        memo.content.toLowerCase().includes(lowerCaseInput)
       );
       setFilteredMemos(filtered);
     }
