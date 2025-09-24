@@ -96,7 +96,7 @@ export const exportMemosToJson = async (
   const a = document.createElement('a');
   a.href = url;
   const ts = new Date().toISOString().replace(/[:]/g, '-');
-  a.download = `memo-export-${ts}.json`;
+  a.download = `memo-data-${ts}.json`;
   a.click();
 
   URL.revokeObjectURL(url);
