@@ -1,7 +1,11 @@
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext, useEffect, useRef } from "react";
 import { MemoContext, FilteredMemosContext } from "../utils/contexts";
 
 const InputSearch = () => {
+  const inputRef = useRef<HTMLInputElement>(null);
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, []);
   const memoContext = useContext(MemoContext);
   const [memos] = memoContext ?? [[]];
   const filteredMemosContext = useContext(FilteredMemosContext);
@@ -26,6 +30,7 @@ const InputSearch = () => {
 
   return (
     <input
+      ref={inputRef}
       type="text"
       placeholder="検索する"
       value={inputValue}
