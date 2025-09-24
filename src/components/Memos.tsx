@@ -23,7 +23,7 @@ const Memos = () => {
   };
 
   return (
-    <ul className="col-span-full row-span-full row-start-2 flex flex-wrap gap-2 pt-1.5 pb-3 h-auto overflow-y-scroll">
+    <ul className="col-span-full row-span-full row-start-2 flex flex-wrap gap-2 pt-1.5 pb-3 pl-0.5 h-auto overflow-y-scroll">
       {memolistType.map((memo) => (
         <li key={memo.id}>
           <button
