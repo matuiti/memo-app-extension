@@ -4,3 +4,9 @@ export interface Memo {
   content: string;
 }
 
+export interface MemoData {
+  memos: Memo[];
+  currentMemoId: number | null;
+}
+
+

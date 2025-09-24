@@ -29,7 +29,7 @@ const InputSearch = () => {
     }
 
   }, [inputValue, memos, setFilteredMemos]);
-
+// 検索バーにフォーカスが当たっているときのアウトラインを設定する
   return (
     <input
       ref={inputRef}
@@ -37,7 +37,7 @@ const InputSearch = () => {
       placeholder="検索する"
       value={inputValue}
       onChange={handleChange}
-      className="col-span-10 row-span-2 self-center px-5 py-2 bg-[var(--bg-input-search)] rounded-sm min-w-[var(--width-input-search)] h-[var(--height-input-search)] outline-none"
+      className="col-span-10 self-center px-5 py-2 bg-[var(--bg-input-search)] rounded-3xl min-w-[var(--width-input-search)] h-[var(--height-input-search)] focus:outline-1 focus:outline-[var(--outline-color-input-search)]"
     />
   );
 };

@@ -11,14 +11,16 @@
   --bg-memo-current: pink;
   --bg-btn-add: #eb2c2c;
   --bg-btn-delete: mediumturquoise;
+  --bg-btn-export: lightgreen;
+  --bg-btn-import: lightblue;
   --bg-input-search: bisque;
 
   --text-color: black;
   --text-color-muted: #888;
+  --outline-color-input-search: green;
+  --outline-color-memo: palevioletred;
 
-  --outline-color: palevioletred;
-
-  --width-app: 620px;
+  --width-app: 680px;
   --height-app: 100%;
   --height-control: 200px;
   --width-input-search: 60%;
