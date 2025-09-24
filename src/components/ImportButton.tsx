@@ -24,7 +24,7 @@ const ImportButton = () => {
   return (
     <>
       <button
-        className="col-start-11 col-span-2 row-start-4 w-15 h-10 bg-[var(--bg-btn-import)] rounded-sm justify-self-center"
+        className="col-start-9 w-17 h-10 bg-[var(--bg-btn-import)] rounded-sm justify-self-center"
         onClick={handleClick}
       >
         Import
