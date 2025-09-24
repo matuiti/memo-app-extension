@@ -4,7 +4,17 @@
   "version": "1.0",
   "description": "ローカル専用メモ管理拡張",
   "permissions": ["storage"],
+  "icons": {
+    "16": "icon128.png",
+    "48": "icon128.png",
+    "128": "icon128.png"
+  },
   "action": {
+    "default_icon": {
+      "16": "icon128.png",
+      "48": "icon128.png",
+      "128": "icon128.png"
+    },
     "default_popup": "index.html"
   }
 }
