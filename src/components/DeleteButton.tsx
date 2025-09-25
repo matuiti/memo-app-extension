@@ -1,6 +1,6 @@
 import { CurrentMemoIdContext, MemoContext } from "../utils/contexts";
-import { saveCurrentMemoId, saveMemos } from "../utils/functions";
 import { useContext } from "react";
+import { saveCurrentMemoId, saveMemos } from "../utils/storage";
 
 const DeleteButton = () => {
   const memoContext = useContext(MemoContext);
