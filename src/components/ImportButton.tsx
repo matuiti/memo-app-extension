@@ -1,7 +1,7 @@
 import { useRef, useContext } from "react";
 import { importMemosFromJson } from "../utils/importMemos";
-import { initializeMemos, initializeCurrentMemoId } from "../utils/functions";
 import { MemoContext, CurrentMemoIdContext } from "../utils/contexts";
+import { initializeCurrentMemoId, initializeMemos } from "../utils/initialize";
 
 const ImportButton = () => {
   const inputRef = useRef<HTMLInputElement>(null);

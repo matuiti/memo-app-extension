@@ -7,18 +7,18 @@ import ExportButton from './components/ExportButton';
 import ImportButton from './components/ImportButton';
 import Memos from './components/Memos';
 import TextArea from './components/TextArea';
-import { initializeCurrentMemoId, initializeMemos } from './utils/functions';
 import {
   MemoContext,
   CurrentMemoIdContext,
   TextAreaRefContext,
   FilteredMemosContext,
 } from './utils/contexts';
-import type { Memo } from './utils/types';
+import type { CurrentMemoId, Memo } from './utils/types';
+import { initializeCurrentMemoId, initializeMemos } from './utils/initialize';
 
 export function App() {
   const [memos, setMemos] = useState<Memo[]>([]);
-  const [currentMemoId, setCurrentMemoId] = useState<number | null>(null);
+  const [currentMemoId, setCurrentMemoId] = useState<CurrentMemoId>(null);
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
   const [filteredMemos, setFilteredMemos] = useState<Memo[]>([]);
 

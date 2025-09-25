@@ -1,7 +1,8 @@
 import { useEffect, useState, useContext } from 'react';
-import { generateTitle, saveMemos, saveCurrentMemoId } from '../utils/functions';
 import { CurrentMemoIdContext, MemoContext, TextAreaRefContext } from '../utils/contexts';
 import type { Memo } from '../utils/types';
+import { saveCurrentMemoId, saveMemos } from '../utils/storage';
+import { generateTitle } from '../utils/utils';
 
 const TextArea = () => {
   const textAreaRef = useContext(TextAreaRefContext);

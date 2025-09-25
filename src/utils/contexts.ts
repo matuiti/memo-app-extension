@@ -1,12 +1,12 @@
 import { createContext, type Dispatch, type RefObject, type SetStateAction } from "react";
-import type { Memo } from "../utils/types";
+import type { Memo, CurrentMemoId } from "../utils/types";
 
 export const MemoContext = createContext<
   [Memo[], Dispatch<SetStateAction<Memo[]>>]
 >([[], () => {}]);
 
 export const CurrentMemoIdContext = createContext<
-  [number | null, Dispatch<SetStateAction<number | null>>]
+  [CurrentMemoId, Dispatch<SetStateAction<CurrentMemoId>>]
 >([null, () => {}]);
 
 export const TextAreaRefContext =

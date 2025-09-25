@@ -1,5 +1,5 @@
+import { loadCurrentMemoId, loadMemos, saveCurrentMemoId, saveMemos } from './storage';
 import { isMemoData } from './validators';
-import { loadMemos, loadCurrentMemoId, saveMemos, saveCurrentMemoId } from './functions';
 
 export const importMemosFromJson = async (file: File): Promise<void> => {
   try {

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { exportMemosToJson } from "../utils/functions";
+import { exportMemosToJson } from "../utils/exportMemos";
 import { MemoContext, CurrentMemoIdContext } from "../utils/contexts";
 
 const ExportButton = () => {

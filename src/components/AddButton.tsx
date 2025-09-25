@@ -4,7 +4,7 @@ import {
   MemoContext,
   TextAreaRefContext,
 } from "../utils/contexts";
-import { saveCurrentMemoId, saveMemos } from "../utils/functions";
+import { saveCurrentMemoId, saveMemos } from "../utils/storage";
 
 const AddButton = () => {
   const textAreaRef = useContext(TextAreaRefContext);
